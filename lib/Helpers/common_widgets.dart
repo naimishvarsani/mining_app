@@ -10,6 +10,7 @@ class CommonWidget {
       textAlign,
       textColor,
       textSize,
+      spacing,
       textWeight}) {
     return Text(text,
         maxLines: textMaxline,
@@ -18,6 +19,7 @@ class CommonWidget {
         style: GoogleFonts.alatsi(
           color: textColor,
           fontSize: textSize,
+          letterSpacing: spacing,
           fontWeight: textWeight,
         ));
   }

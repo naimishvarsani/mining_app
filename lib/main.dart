@@ -5,8 +5,8 @@ import 'package:mining_app/Screens/bottom_nav_bar.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+  // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
   runApp(const MyApp());
 }
 
@@ -18,9 +18,6 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Mining App',
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
       home: BottomNavBar(),
     );
   }

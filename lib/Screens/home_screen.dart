@@ -1,13 +1,13 @@
 // ignore_for_file: deprecated_member_use, prefer_interpolation_to_compose_strings, sort_child_properties_last, unused_field
 
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mining_app/Helpers/colors.dart';
 import 'package:mining_app/Helpers/common_widgets.dart';
 import 'package:mining_app/Helpers/images.dart';
+import 'package:mining_app/Screens/profile_screen.dart';
 import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -66,13 +66,18 @@ class _HomeScreenState extends State<HomeScreen> {
         surfaceTintColor: AppColors.bgColor,
         titleSpacing: 20,
         title: CommonWidget().alatsiText(
-            text: "Hi,\nNaimish Varsani", textColor: AppColors.whiteColor),
+            text: "Hi, 👋\nNaimish Varsani", textColor: AppColors.whiteColor),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 15),
-            child: CircleAvatar(
-              radius: 18,
-              child: Icon(Icons.person),
+            padding: EdgeInsets.only(right: 15),
+            child: GestureDetector(
+              onTap: () {
+                Get.to(ProfileScreen());
+              },
+              child: CircleAvatar(
+                radius: 18,
+                child: Icon(Icons.person),
+              ),
             ),
           ),
         ],
