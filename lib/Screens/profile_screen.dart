@@ -4,6 +4,7 @@ import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mining_app/Screens/convert_coin.dart';
 
 import '../Helpers/colors.dart';
 import '../Helpers/common_widgets.dart';
@@ -189,35 +190,42 @@ class ProfileScreen extends StatelessWidget {
                 padding: EdgeInsets.only(left: 10),
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        Container(
-                          height: 45,
-                          width: 45,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      AppImages.icons + "convert.png"),
-                                  fit: BoxFit.cover)),
-                        ),
-                        SizedBox(width: 15),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            CommonWidget().alatsiText(
-                                text: "Convert Super Coins",
-                                textColor: AppColors.whiteColor,
-                                textSize: 16.0,
-                                textWeight: FontWeight.w500),
-                            CommonWidget().alatsiText(
-                                text: "Convert your super coins into the USDT",
-                                textColor: AppColors.whiteColor.withOpacity(.3),
-                                textSize: 12.0,
-                                textWeight: FontWeight.w500),
-                          ],
-                        ),
-                      ],
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(ConvertCoin());
+                      },
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 45,
+                            width: 45,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        AppImages.icons + "convert.png"),
+                                    fit: BoxFit.cover)),
+                          ),
+                          SizedBox(width: 15),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CommonWidget().alatsiText(
+                                  text: "Convert Super Coins",
+                                  textColor: AppColors.whiteColor,
+                                  textSize: 16.0,
+                                  textWeight: FontWeight.w500),
+                              CommonWidget().alatsiText(
+                                  text:
+                                      "Convert your super coins into the USDT",
+                                  textColor:
+                                      AppColors.whiteColor.withOpacity(.3),
+                                  textSize: 12.0,
+                                  textWeight: FontWeight.w500),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(height: 10),
                     Row(

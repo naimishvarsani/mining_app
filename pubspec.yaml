@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   get:
+  http:
   google_fonts:
   shared_preferences: ^2.5.3
   simple_circular_progress_bar: ^1.0.2
@@ -44,6 +45,8 @@ dependencies:
   lottie: ^3.3.1
   flip_card: ^0.7.0
   colorful_safe_area: ^1.0.0
+  flutter_stripe: ^11.5.0
+  flutter_dotenv:
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +74,7 @@ flutter:
   assets:
     - assets/Images/
     - assets/icons/
+    - assets/.env
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
