@@ -47,6 +47,7 @@ dependencies:
   colorful_safe_area: ^1.0.0
   flutter_stripe: ^11.5.0
   flutter_dotenv:
+  in_app_purchase: ^3.2.3
 
 dev_dependencies:
   flutter_test:

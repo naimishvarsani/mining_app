@@ -1,4 +1,4 @@
-package com.flutter.stripe.example
+package com.example.mining_app
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.android.FlutterFragmentActivity
