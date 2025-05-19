@@ -29,6 +29,7 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
         multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -36,12 +37,17 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.debug
-            minifyEnabled true
-            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
 }
 
 flutter {
     source = "../.."
+}
+dependencies {
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.0'
+    implementation 'com.google.android.gms:play-services-wallet:19.1.0'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
